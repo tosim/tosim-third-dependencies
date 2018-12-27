@@ -13,13 +13,20 @@
     <properties>
         <slf4j.version>1.7.25</slf4j.version>
         <log4j.version>2.8.2</log4j.version>
-        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+
         <mysql-connector.version>5.1.46</mysql-connector.version>
         <druid.version>1.1.10</druid.version>
+
         <commons-lang3.version>3.7</commons-lang3.version>
         <fastjson.version>1.2.51</fastjson.version>
-        <elasticsearch.version>6.5.3</elasticsearch.version>
         <commons-collections4.version>4.1</commons-collections4.version>
+        <apache-pool2.version>2.6.0</apache-pool2.version>
+        <okhttp3.version>3.10.0</okhttp3.version>
+
+        <redisson.version>3.3.2</redisson.version>
+
+        <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <elasticsearch.version>5.6.9</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
@@ -50,15 +57,6 @@
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
                 <version>${log4j.version}</version>
-            </dependency>
-
-            <!--spring-boot-parent-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
 
             <!--mysql:5.6 connector-->
@@ -96,10 +94,40 @@
                 <version>${commons-collections4.version}</version>
             </dependency>
 
-            <!--elasticsearch-->
+            <!--common-pool2-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${apache-pool2.version}</version>
+            </dependency>
+
+            <!--okhttp3-->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
+            </dependency>
+
+            <!--reddision-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!--spring-boot-dependencies-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--elasticsearch rhlc-->
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
-                <artifactId>transport</artifactId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
         </dependencies>
