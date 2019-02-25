@@ -137,11 +137,11 @@
 
     <distributionManagement>
         <repository>
-            <id>libs-releases</id>
+            <id>tosim-libs-releases</id>
             <url>http://47.100.63.91:7021/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>libs-snapshots</id>
+            <id>tosim-libs-snapshots</id>
             <url>http://47.100.63.91:7021/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
