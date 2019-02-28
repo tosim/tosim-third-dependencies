@@ -26,7 +26,12 @@
         <redisson.version>3.3.2</redisson.version>
 
         <spring-boot.version>2.0.6.RELEASE</spring-boot.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <elasticsearch.version>5.6.9</elasticsearch.version>
+        <dubbo.version>2.7.0</dubbo.version>
+        <curator-framework.version>2.12.0</curator-framework.version>
+        <curator-recipes.version>2.12.0</curator-recipes.version>
+
         <swagger2.version>2.8.0</swagger2.version>
     </properties>
 
@@ -115,13 +120,21 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--spring-cloud-dependencies-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!--elasticsearch rhlc-->
             <dependency>
                 <groupId>org.elasticsearch.client</groupId>
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
-            <!--swagger2-->
+            <!--dubboconsumer-->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -131,6 +144,33 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger2.version}</version>
+            </dependency>
+            <!--apache dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-common</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-rpc-api</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <!--curator-->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator-framework.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator-recipes.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
